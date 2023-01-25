@@ -3,9 +3,9 @@
     <h1>Products index</h1>
     <div class="m-2 p-2">
         @auth()
-            @if(auth()->user()->is_admin)
+{{--            @if(auth()->user()->is_admin)--}}
                 <a class="px-4 py-3 rounded bg-green-400" href="/products/create">Create</a>
-            @endif
+{{--            @endif--}}
         @endauth
     </div>
     <!-- This example requires Tailwind CSS v2.0+ -->
@@ -16,6 +16,7 @@
                         <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-gray-50">
                             <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
